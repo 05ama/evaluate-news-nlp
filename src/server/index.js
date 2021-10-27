@@ -18,10 +18,9 @@ app.use(cors());
 
 console.log(__dirname)
 
-app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
-})
+app.get("/", function (req, res) {
+    res.sendFile("dist/index.html");
+  });
 
 app.get('/runAnalysis/*', async (req, res) => {
     let application_key = process.env.API_KEY;
